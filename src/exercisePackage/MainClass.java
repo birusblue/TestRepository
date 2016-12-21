@@ -94,5 +94,4 @@ public class MainClass
 		{ armstrongOrNot=true;}
 		return armstrongOrNot;
 	}
-	
 }
