@@ -7,6 +7,7 @@ public class MainClass
 		System.out.println(fibonacci(5));
 		fibonacciPrint(5);
 		System.out.println(isPrime(12));
+		System.out.println(isPalindrome(1211));
 	}
 	public static int fibonacci(int n)
 	{
@@ -45,5 +46,19 @@ public class MainClass
 		}		
 		return primeOrNot;
 	}
-	
+	public static boolean isPalindrome(int number)
+	{
+		boolean palindromeOrNot=false;
+		int mynumber=number;
+		int reverse=0;
+		while(mynumber>0)
+		{			
+			int last= mynumber%10;
+			reverse=(reverse*10)+last;
+			mynumber=mynumber/10;
+		}
+		if(reverse==number)
+		{ palindromeOrNot=true;}
+		return palindromeOrNot;
+	}
 }
