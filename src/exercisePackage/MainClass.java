@@ -8,6 +8,8 @@ public class MainClass
 		fibonacciPrint(5);
 		System.out.println(isPrime(12));
 		System.out.println(isPalindrome(1211));
+		System.out.println(factorial(5));
+		System.out.println(factorialRecursion(5));
 	}
 	public static int fibonacci(int n)
 	{
@@ -60,5 +62,20 @@ public class MainClass
 		if(reverse==number)
 		{ palindromeOrNot=true;}
 		return palindromeOrNot;
+	}
+	public static int factorial(int number)
+	{ 
+		int fact=1;
+		for(int i=1;i<=number;i++)
+		{
+			fact=fact*i;			
+		}
+		return fact;
+	}
+	public static int factorialRecursion(int number)
+	{
+		if(number==1)
+		{return 1;}
+		return factorialRecursion(number-1)*number;
 	}
 }
