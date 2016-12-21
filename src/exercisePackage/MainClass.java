@@ -10,6 +10,7 @@ public class MainClass
 		System.out.println(isPalindrome(1211));
 		System.out.println(factorial(5));
 		System.out.println(factorialRecursion(5));
+		System.out.println(isArmstrongNumber(371));
 	}
 	public static int fibonacci(int n)
 	{
@@ -77,5 +78,20 @@ public class MainClass
 		if(number==1)
 		{return 1;}
 		return factorialRecursion(number-1)*number;
+	}
+	public static boolean isArmstrongNumber(int number)
+	{
+		boolean armstrongOrNot=false;
+		int temp=number;
+		int ifarmStrong=0;
+		while(temp>0)
+		{
+			int last=temp%10;
+			ifarmStrong=ifarmStrong+(last*last*last);
+			temp=temp/10;
+		}
+		if(ifarmStrong==number)
+		{ armstrongOrNot=true;}
+		return armstrongOrNot;
 	}
 }
