@@ -6,7 +6,7 @@ public class MainClass
 	{
 		System.out.println(fibonacci(5));
 		fibonacciPrint(5);
-		
+		System.out.println(isPrime(12));
 	}
 	public static int fibonacci(int n)
 	{
@@ -30,6 +30,20 @@ public class MainClass
 			a=b;
 			b=c+b;
 		}
+	}
+	public static boolean isPrime(int number)
+	{
+		int mynumber=number;
+		boolean primeOrNot=true;
+		int half=mynumber/2;
+		for(int i=2;i<=half;i++)
+		{
+			if((mynumber%i)==0)
+			{
+				primeOrNot=false;
+			}
+		}		
+		return primeOrNot;
 	}
 	
 }
